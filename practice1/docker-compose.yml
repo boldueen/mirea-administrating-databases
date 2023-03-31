@@ -1,0 +1,28 @@
+# version: '3'
+
+# services:
+#   mongodb:
+#     image: mongodb/mongodb-community-server:6.0-ubi8
+#     ports:
+#       - 27017:27917
+#     environment:
+#       - MONGODB_INITDB_ROOT_USERNAME=user
+#       - MONGODB_INITDB_ROOT_PASSWORD=pass
+#     volumes:
+#       - "./data:/data/db"
+
+
+version: '3.9'
+
+services:
+  mongo:
+    image: mongo:6.0.4-jammy
+    container_name: da-mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data:/data/db
+
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: pass

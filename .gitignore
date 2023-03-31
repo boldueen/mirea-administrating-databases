@@ -1,0 +1,4 @@
+/practice1/data
+/practice1/docker-entrypoint-initdb.d
+/practice1/.env
+/practice1!.env.example
